@@ -225,11 +225,179 @@
           <h2>Scan again anytime</h2>
           <p>Stick me on your fridge, your laptop, your neighbor&apos;s fridge — I won&apos;t tell.</p>
           <img src="assets/qr-code.svg" alt="Printable QR code linking back to Riya&apos;s story" />
+          
+    <title>Meet Your GigBud Courier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="hero" role="banner">
+      <div class="hero__content">
+        <p class="hero__kicker">Thanks for inviting GigBud into your day!</p>
+        <h1>Hi, I&apos;m <span class="highlight">Riya Sharma</span> — your delivery superstar ✨</h1>
+        <p class="hero__lede">
+          I just dropped off your order with care. Before you dig in, take a second to meet the person behind the delivery and discover how a quick high-five (a.k.a a 5⭐ rating) keeps the good vibes coming.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#rating">Give Riya a 5-Star High-Five</a>
+          <button class="btn btn--secondary" data-action="share">Share the love</button>
+        </div>
+        <dl class="hero__stats" aria-label="Delivery stats">
+          <div>
+            <dt>1,420+</dt>
+            <dd>Deliveries completed</dd>
+          </div>
+          <div>
+            <dt>98%</dt>
+            <dd>Customer happiness score</dd>
+          </div>
+          <div>
+            <dt>12,500</dt>
+            <dd>Km cycled so far</dd>
+          </div>
+        </dl>
+      </div>
+      <figure class="hero__portrait" aria-labelledby="portrait-caption">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="Riya smiling while holding a delivery bag" />
+        <figcaption id="portrait-caption">Always smiling, always on time.</figcaption>
+      </figure>
+    </header>
+
+    <main>
+      <section id="rating" class="section section--accent" aria-labelledby="rating-title">
+        <div class="section__content">
+          <h2 id="rating-title">Your 5-star review keeps the wheels turning</h2>
+          <p>
+            Ratings are like power-ups for delivery partners. They help me unlock bonus earnings, stay in the fast lane for new gigs, and prove to the GigBud team that I&apos;m delivering delight with every order.
+          </p>
+          <ol class="rating-steps">
+            <li>Open your delivery app.</li>
+            <li>Tap on your recent order details.</li>
+            <li>Hit the 5⭐ button and drop a short note if I made your day!</li>
+          </ol>
+          <div class="reminder-card" role="note" aria-label="Friendly reminder">
+            <div>
+              <h3>Quick reminder</h3>
+              <p>Don&apos;t wait! Ratings are available for just 48 hours after delivery.</p>
+            </div>
+            <button class="btn btn--ghost" data-action="reminder">Send me a reminder</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="about-title">
+        <div class="section__content">
+          <h2 id="about-title">A little more about me</h2>
+          <div class="grid grid--two">
+            <article class="card">
+              <h3>Why I ride</h3>
+              <p>
+                Delivering for GigBud lets me fund my UX design diploma while exploring every corner of the city. Each doorstep story inspires the app ideas I&apos;m sketching at night.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Signature move</h3>
+              <p>
+                Double-checking every order so you always get the right treats. If it&apos;s raining, I pack an extra layer to keep everything cozy.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Community love</h3>
+              <p>
+                On weekends I volunteer with the Pedal Power collective — we deliver surplus bakery goodies to local shelters using only bicycles.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Fun fact</h3>
+              <p>
+                I&apos;ve mapped 87 hidden coffee spots in the city. Scan the QR again soon — I&apos;ll keep sharing my favorites!
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" aria-labelledby="timeline-title">
+        <div class="section__content">
+          <h2 id="timeline-title">Delivery journey</h2>
+          <ul class="timeline">
+            <li>
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__body">
+                <h3>2021 · First ride</h3>
+                <p>Started as a part-time courier while finishing my communication degree. Fell in love with the rhythm of the city.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__body">
+                <h3>2022 · Safety champ</h3>
+                <p>Certified in advanced road safety and first aid. Sharing best practices with new riders ever since.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__body">
+                <h3>2023 · Customer hero</h3>
+                <p>Named top-rated GigBud in the city with over 1,000 glowing reviews.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline__marker" aria-hidden="true"></div>
+              <div class="timeline__body">
+                <h3>2024 · Pedal powered future</h3>
+                <p>Transitioned to a fully electric bike fleet to deliver greener and faster.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="feedback-title">
+        <div class="section__content">
+          <h2 id="feedback-title">Drop me a note</h2>
+          <p>
+            Have a suggestion or just want to say thanks? Send a quick message — it lands directly in my inbox and brightens the day.
+          </p>
+          <form class="contact-form" aria-label="Send Riya a message">
+            <div class="contact-form__row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="contact-form__row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="What made the delivery special?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Send appreciation</button>
+            <p class="contact-form__disclaimer">(Demo form — replace with your preferred inbox service.)</p>
+          </form>
         </div>
       </section>
     </main>
 
     <div class="sparkle-toast" role="status" aria-live="polite" hidden></div>
+    <footer class="footer" role="contentinfo">
+      <div class="footer__content">
+        <div class="footer__qr">
+          <img src="assets/qr-code.svg" alt="Printable QR code linking to this page" />
+          <p>Print &amp; stick me on delivery bags.<br />URL encoded: <span class="code">https://gbd.to/r1</span></p>
+        </div>
+        <div class="footer__text">
+          <p class="footer__headline">GigBud Courier Card</p>
+          <p>
+            Save this page to your home screen for easy sharing. Need a different link? Run <code>python tools_generate_qr.py &lt;your-url&gt; assets/qr-code.svg</code> to update the printable QR.
+          </p>
+          <nav aria-label="Additional links" class="footer__links">
+            <a href="#rating">Leave a rating</a>
+            <a href="#about-title">About</a>
+            <a href="#feedback-title">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <p class="footer__note">Made with pedal power &amp; positivity.</p>
+    </footer>
 
     <script src="js/main.js" defer></script>
   </body>
