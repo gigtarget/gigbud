@@ -3,6 +3,229 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ride Along with Riya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar" role="banner">
+      <span class="topbar__tag">gigbud mini-moment</span>
+      <span class="topbar__caption">scroll with sound on (optional) · made by riya for you</span>
+    </header>
+
+    <main class="experience" role="main">
+      <section class="spotlight" aria-live="polite">
+        <div class="spotlight__glow" aria-hidden="true"></div>
+        <div class="spotlight__content">
+          <p class="spotlight__label" id="spotlightLabel">5:42 pm · ping!</p>
+          <div class="spotlight__emoji" id="spotlightEmoji" aria-hidden="true">📲</div>
+          <h1 class="spotlight__title">
+            <span id="spotlightTitle">Ride along with Riya</span>
+          </h1>
+          <p class="spotlight__subtitle" id="spotlightSubtitle">
+            Scroll to glide through the micro-adventure from order ping to doorstep high-five.
+          </p>
+        </div>
+        <div class="progress" role="status" aria-live="off" aria-label="Story progress">
+          <div class="progress__bar" id="progressBar"></div>
+        </div>
+      </section>
+
+      <section class="story" aria-label="Delivery story">
+        <article
+          class="scene scene--active"
+          data-label="5:42 pm · ping!"
+          data-emoji="📲"
+          data-title="Riya gets the call"
+          data-subtitle="Alex craves pad thai, the adventure begins"
+          data-gradient="linear-gradient(135deg, #0d1b66 0%, #2d51ff 55%, #76a5ff 100%)"
+          data-accent="#7aa8ff"
+        >
+          <div class="scene__wrapper">
+            <div class="scene__panel">
+              <p class="scene__eyebrow">new order vibe</p>
+              <h2>Order accepted in 1.3 seconds</h2>
+              <p>
+                My watch buzzes, neon city map lights up, and the playlist flips to my
+                <span class="highlight">"zoom zoom"</span> mix. I scribble your name on a sticker — it feels like signing a
+                comic book.
+              </p>
+              <div class="bubble">“This one&apos;s for Alex. Let&apos;s make it legendary.”</div>
+            </div>
+            <div class="scene__visual scene__visual--ping">
+              <span aria-hidden="true">Order ✓</span>
+              <span aria-hidden="true">Sizzling noodles queued</span>
+              <span aria-hidden="true">Bike battery 92%</span>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="scene"
+          data-label="5:49 pm · kitchen sync"
+          data-emoji="🎧"
+          data-title="Waiting groove time"
+          data-subtitle="I turn the pickup wait into a backstage warm-up"
+          data-gradient="linear-gradient(135deg, #141221 0%, #372e89 45%, #ff8cf2 100%)"
+          data-accent="#ff8cf2"
+        >
+          <div class="scene__wrapper">
+            <div class="scene__panel">
+              <p class="scene__eyebrow">warm-up loop</p>
+              <h2>Kitchen check-ins &amp; quiet fist bumps</h2>
+              <p>
+                While your noodles dance in the wok, I stretch, sync breathing, and trade nods with the chefs. The steam looks
+                like stage fog — obviously I pretend I&apos;m about to headline a concert.
+              </p>
+              <ul class="list list--tags">
+                <li>#stretch</li>
+                <li>#chefside</li>
+                <li>#vibecheck</li>
+              </ul>
+            </div>
+            <div class="scene__visual scene__visual--equalizer" aria-hidden="true">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="scene"
+          data-label="6:03 pm · neon lanes"
+          data-emoji="🚴‍♀️"
+          data-title="Hyperfocus ride"
+          data-subtitle="The city goes cinematic when it&apos;s game time"
+          data-gradient="linear-gradient(135deg, #03161d 0%, #0085ff 50%, #00ffd1 100%)"
+          data-accent="#00ffd1"
+        >
+          <div class="scene__wrapper">
+            <div class="scene__panel">
+              <p class="scene__eyebrow">glow trail</p>
+              <h2>Blue lights, fast lanes, zero crumbs</h2>
+              <p>
+                Tires hum, drone-level focus on pothole dodging, and the wind smells like rain and fortune cookies. Your bag sits
+                inside a thermal cocoon — I call it the <span class="highlight">SnugPod</span>.
+              </p>
+              <div class="sticker">speed mood · 23 km/h average</div>
+            </div>
+            <div class="scene__visual scene__visual--map">
+              <svg viewBox="0 0 240 240" role="img" aria-label="Map path animation">
+                <path d="M20 200 C60 120, 80 80, 120 70 C160 60, 200 80, 220 30" />
+                <circle class="dot" cx="20" cy="200" r="6"></circle>
+                <circle class="dot" cx="220" cy="30" r="6"></circle>
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="scene"
+          data-label="6:11 pm · rooftop pause"
+          data-emoji="🌆"
+          data-title="Mini detour for skyline joy"
+          data-subtitle="One breath, one photo, then back to mission"
+          data-gradient="linear-gradient(135deg, #19072f 0%, #6424ff 50%, #ffd86f 100%)"
+          data-accent="#ffd86f"
+        >
+          <div class="scene__wrapper">
+            <div class="scene__panel">
+              <p class="scene__eyebrow">secret intermission</p>
+              <h2>Elevator ride to the best view in the district</h2>
+              <p>
+                I glide up the service elevator, whisper a thank-you to the concierge, and snap a skyline pic for the GigBud photo
+                dump. Consider it your bonus postcard.
+              </p>
+              <div class="polaroid">
+                <span class="polaroid__stamp">tonight&apos;s sky</span>
+                <span class="polaroid__note">Clouds shaped like noodles. Sent it in the chat for proof.</span>
+              </div>
+            </div>
+            <div class="scene__visual scene__visual--sunset" aria-hidden="true">
+              <span class="sun"></span>
+              <span class="glow"></span>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="scene"
+          data-label="6:18 pm · doorstep"
+          data-emoji="🎉"
+          data-title="Delivery confetti"
+          data-subtitle="Door swings open, soundtrack hits crescendo"
+          data-gradient="linear-gradient(135deg, #0b1724 0%, #3f4fff 45%, #ff92a5 100%)"
+          data-accent="#ff92a5"
+        >
+          <div class="scene__wrapper">
+            <div class="scene__panel">
+              <p class="scene__eyebrow">main event</p>
+              <h2>The reveal: pad thai perfectly upright</h2>
+              <p>
+                You answer with surprised eyes (5% confusion, 95% joy). I deliver the goods with a mini bow and a dad joke about
+                chopsticks being lightsabers. We laugh, I pedal off into the neon.
+              </p>
+              <div class="confetti">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="scene__visual scene__visual--door" aria-hidden="true">
+              <span class="door"></span>
+              <span class="frame"></span>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="scene scene--final"
+          data-label="post-ride cooldown"
+          data-emoji="💌"
+          data-title="You + me + a tiny favor?"
+          data-subtitle="Totally optional, eternally appreciated"
+          data-gradient="linear-gradient(135deg, #070b14 0%, #173bff 40%, #9f8bff 100%)"
+          data-accent="#9f8bff"
+        >
+          <div class="scene__wrapper">
+            <div class="scene__panel">
+              <p class="scene__eyebrow">afterglow</p>
+              <h2>Drop a secret handshake in the app</h2>
+              <p>
+                A 5⭐ rating is basically a cosmic fist bump that keeps me zooming to the next adventure. But mostly, I hope the
+                noodles slap.
+              </p>
+              <button class="cta" type="button" data-action="spark">Send a sparkle</button>
+              <p class="cta__hint">(If your app has ratings, that&apos;s the sparkle button!)</p>
+            </div>
+            <div class="scene__visual scene__visual--heart" aria-hidden="true">
+              <span class="pulse"></span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="afterglow" aria-label="Extras">
+        <div class="afterglow__card">
+          <h2>Bonus content unlocked ✨</h2>
+          <ul>
+            <li><strong>Tonight&apos;s soundtrack:</strong> <em>Hyperloop Hearts</em> playlist</li>
+            <li><strong>Bike name:</strong> Nova — because she glows in the dark</li>
+            <li><strong>Secret hobby:</strong> I illustrate delivery moments as mini comics</li>
+          </ul>
+        </div>
+        <div class="afterglow__card afterglow__card--qr">
+          <h2>Scan again anytime</h2>
+          <p>Stick me on your fridge, your laptop, your neighbor&apos;s fridge — I won&apos;t tell.</p>
+          <img src="assets/qr-code.svg" alt="Printable QR code linking back to Riya&apos;s story" />
+          
     <title>Meet Your GigBud Courier</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -154,6 +377,7 @@
       </section>
     </main>
 
+    <div class="sparkle-toast" role="status" aria-live="polite" hidden></div>
     <footer class="footer" role="contentinfo">
       <div class="footer__content">
         <div class="footer__qr">
