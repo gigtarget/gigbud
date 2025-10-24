@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GigBud QR Sticker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        font-family: "Inter", system-ui, sans-serif;
+        color: #111827;
+      }
+
+      body {
+        margin: 0;
+        padding: 2rem;
+        background: #f3f4f6;
+      }
+
+      .card {
+        width: 320px;
+        padding: 1.75rem 1.5rem;
+        background: #ffffff;
+        border-radius: 24px;
+        margin: 0 auto;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0 0 0.75rem;
+      }
+
+      p {
+        margin: 0 0 1.25rem;
+        line-height: 1.5;
+      }
+
+      .qr {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 0.75rem;
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+        margin-bottom: 1.25rem;
+      }
+
+      .url {
+        font-family: "JetBrains Mono", "Fira Code", monospace;
+        font-size: 0.95rem;
+        background: #fef3c7;
+        padding: 0.4rem 0.75rem;
+        border-radius: 999px;
+        display: inline-block;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+          background: #fff;
+        }
+
+        .card {
+          box-shadow: none;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main">
+      <h1>Scan to meet your courier</h1>
+      <p>Stick this badge on your delivery bag so customers can learn more about Riya and drop a 5⭐ review.</p>
+      <div class="qr">
+        <img src="assets/qr-code.svg" alt="QR code linking to https://gbd.to/r1" width="220" height="220" />
+      </div>
+      <p class="url">https://gbd.to/r1</p>
+      <p style="font-size: 0.8rem; color: #6b7280;">Need to update the link? Run <code>python tools_generate_qr.py &lt;new-url&gt; assets/qr-code.svg</code>.</p>
+    </main>
+  </body>
+</html>
