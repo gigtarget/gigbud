@@ -20,14 +20,16 @@ import os
 import random
 import shutil
 import tempfile
+import time
 from pathlib import Path
 from typing import Awaitable, Callable, List, Tuple
 
 import yt_dlp
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 from telegram import Update
-from telegram.error import TelegramError
+from telegram.error import Conflict, TelegramError
 from telegram.ext import (
+    Application,
     ApplicationBuilder,
     CommandHandler,
     ConversationHandler,
@@ -296,20 +298,46 @@ def main() -> None:
     if not BOT_TOKEN:
         raise ValueError("BOT_TOKEN environment variable not set!")
 
-    application = ApplicationBuilder().token(BOT_TOKEN).build()
+    def build_application() -> Application:
+        application = ApplicationBuilder().token(BOT_TOKEN).build()
 
-    conversation = ConversationHandler(
-        entry_points=[CommandHandler("start", start)],
-        states={
-            WAITING_FOR_URL: [MessageHandler(filters.TEXT & ~filters.COMMAND, receive_url)],
-        },
-        fallbacks=[CommandHandler("cancel", cancel)],
-        allow_reentry=True,
-    )
-    application.add_handler(conversation)
+        conversation = ConversationHandler(
+            entry_points=[CommandHandler("start", start)],
+            states={
+                WAITING_FOR_URL: [
+                    MessageHandler(filters.TEXT & ~filters.COMMAND, receive_url)
+                ],
+            },
+            fallbacks=[CommandHandler("cancel", cancel)],
+            allow_reentry=True,
+        )
+        application.add_handler(conversation)
+        return application
 
-    logger.info("🤖 Bot is running...")
-    application.run_polling()
+    backoff_seconds = 5
+    max_backoff = 60
+
+    while True:
+        application = build_application()
+
+        try:
+            logger.info("🤖 Bot is running...")
+            application.run_polling(drop_pending_updates=True)
+            break
+        except Conflict as exc:
+            logger.warning(
+                "Polling conflict detected (%s). Another instance may be running. "
+                "Retrying in %s seconds.",
+                exc,
+                backoff_seconds,
+            )
+        except Exception:
+            logger.exception(
+                "Bot crashed unexpectedly. Restarting in %s seconds.", backoff_seconds
+            )
+
+        time.sleep(backoff_seconds)
+        backoff_seconds = min(backoff_seconds * 2, max_backoff)
 
 
 if __name__ == "__main__":
