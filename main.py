@@ -51,6 +51,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Silence extremely noisy HTTP polling logs produced by python-telegram-bot's
+# underlying httpx client so we only see actionable information from our bot.
+logging.getLogger("httpx").setLevel(logging.WARNING)
+logging.getLogger("httpcore").setLevel(logging.WARNING)
+
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # ---------------------------------------------------------------------------
